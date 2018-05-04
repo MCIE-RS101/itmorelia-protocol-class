@@ -1,0 +1,2 @@
+# The ITMorelia Thesis Class
+
