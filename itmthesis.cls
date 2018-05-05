@@ -13,7 +13,7 @@
 %2.2.1 Booleans  
 \RequirePackage{ifthen}
   \newboolean{@drafting} % print version information on pages
-  \newboolean{@english}  % activates the english version at babel otherwise english
+  \newboolean{@spanish}  % activates the spanish version at babel otherwise english
 %2.2.2 Colors
 \RequirePackage{xcolor}
   \definecolor{c1}{rgb}{0,0,1} % blue
@@ -42,14 +42,30 @@
   
 %************************************
 %3 Options:
-\DeclareOption{drafting}{\setboolean{@drafting}{true}}
+%	3.1 DeclareOptions
+% Option sintax
+% \DeclareOption{⟨option⟩}{⟨code⟩}
+%Code option:
+\DeclareOption{drafting}{
+	%Code
+	\setboolean{@drafting}{true}
+	}
 \DeclareOption{spanish}{
-  %Code option:
-  \setboolean{@spanish}{true}
-  \typeout{spanish to babel}
-  }
-%end code option
+  	%Code 
+  	\setboolean{@spanish}{true}
+  	\typeout{spanish to babel}
+  	}%end code option
 \ProcessOptions\relax
+%	3.2 PassOptionsToPackage
+%if sintax: \ifthenelse{⟨test⟩}{⟨then clause⟩}{⟨else clause⟩}
+%	3.2.1 drafting
+%	3.2.2 babel
+	\ifthenelse{\boolean{@spanish}}%test
+	    {	%then clause
+	    	\@ifpackageloaded{babel}
+	    	{\relax}{\RequirePackage[spanish]{babel}}%
+	    }
+	    {\relax}% else clause
 %************************************
 % 4 Declarations:
 %-------------------------------------
