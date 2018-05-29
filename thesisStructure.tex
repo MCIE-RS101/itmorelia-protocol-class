@@ -1,13 +1,13 @@
-\documentclass{itmthesis}
-\usepackage[spanish]{babel}
+\documentclass[listings,drafting,spanish]{itmthesis}
+%\usepackage[spanish]{babel}
+%Archivos de configuración y paquetes utilizados en tu tesis:
+\input{configuration}
 \begin{document}
-\chapter{Title of the Chapter}
-	%\blindtext
-	\section{Test section}
-	\begin{figure}
+\pagenumbering{roman} % Roman page numbering 
+\input{precontent}
+\include{FrontBackMatter/Contents} % Contents, list of figures/tables/listings and acronyms
+\pagenumbering{arabic} % Arabic page numbering
+\include{Chapters/Chapter01} % Chapter 1
 
-	\end{figure}
-	%	\blindtext
-	\section{Check it}
-Texto en español	
 \end{document}
+

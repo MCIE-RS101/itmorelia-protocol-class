@@ -14,6 +14,7 @@
 \RequirePackage{ifthen}
   \newboolean{@drafting} % print version information on pages
   \newboolean{@spanish}  % activates the spanish version at babel otherwise english
+  \newboolean{@listings} % loads the listings package
 %2.2.2 Colors
 \RequirePackage{xcolor}
   \definecolor{c1}{rgb}{0,0,1} % blue
@@ -31,6 +32,8 @@
 %2.3  Page settings:
 \RequirePackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
 %2.4    Macros and Commands:
+%Commands
+\newcommand{\myVersion}{version 1.0\xspace}
 %2.4.1    Derivatives
 \newcommandx{\pd}[3][1=]{%
   \frac{\partial^{#1} #2}{\partial #3^{#1}}
@@ -55,10 +58,36 @@
   	\setboolean{@spanish}{true}
   	\typeout{spanish to babel}
   	}%end code option
+
+\DeclareOption{listings}{
+  \setboolean{@listings}{true}
+  \typeout{listings option activated}
+}
+
 \ProcessOptions\relax
 %	3.2 PassOptionsToPackage
 %if sintax: \ifthenelse{⟨test⟩}{⟨then clause⟩}{⟨else clause⟩}
 %	3.2.1 drafting
+%+++++++++++++++++++++++++++++++++++++++++++++
+
+
+\RequirePackage{scrtime} %time access
+%Sintax: \newcommand{name}[num]{definition}
+\newcommand{\finalVersionString}{Revised}%Final version text
+\ifthenelse{\boolean{@drafting}}{%
+%  Then clause 
+%    \RequirePackage{draftwatermark}%
+%     \SetWatermarkLightness{0.9}
+%     \SetWatermarkScale{.5}
+%     \SetWatermarkText{\today\ at \thistime}
+    \RequirePackage{prelim2e}
+    \PassOptionsToPackage{draft}{prelim2e}
+        \renewcommand{\PrelimWords}{\relax}
+        \renewcommand{\PrelimText}{\footnotesize[\,\today\ at \thistime\ -- \texttt{itmorelia} \myVersion\,]}
+    }
+    %else clause
+    {\renewcommand{\finalVersionString}{\emph{Final Version} as of \today\ (\texttt{itmorelia} \myVersion).}}
+%+++++++++++++++++++++++++++++++++++++++++++++
 %	3.2.2 babel
 	\ifthenelse{\boolean{@spanish}}%test
 	    {	%then clause
@@ -66,34 +95,61 @@
 	    	{\relax}{\RequirePackage[spanish]{babel}}%
 	    }
 	    {\relax}% else clause
+%3.2.3 Listing related stuff
+\ifthenelse{\boolean{@listings}}%
+    {%then clause
+      \@ifpackageloaded{listings}%
+      {\relax}{\RequirePackage{listings}}%
+    }
+    %else clause
+    {\relax}%      
 %************************************
 % 4 Declarations:
 %-------------------------------------
 
 
 %4.0 chapter
-\renewcommand{\thechapter}{\Roman{chapter}} %Roman enumeration
+%\renewcommand{\thechapter}{\Roman{chapter}} %Roman enumeration
 \titleformat{\chapter}[display]%shape
-  %{\bfseries\Huge\scshape}%Format applyed to the title
-  {\Huge\filleft\sc}%Format applyed to the title
+  {\Huge\filleft\sc}%Format applied to the title
   {\filleft\sc{\chaptertitlename} \thechapter}%Label text and format
   {4ex}%Separation between Label and Title
   {}%Before code 
   [\vspace{2ex}
-\titlerule]%After code
+\color{gray}\titlerule]%After code
  %
 
 %4.1 section
-\titleformat{\section}         % Customise the \section command 
-  {\Large\scshape\raggedright} % Make the \section headers large (\Large),
-                               % small capitals (\scshape) and left aligned (\raggedright)
-  {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
-  {}                           % Can be used to insert code before the heading
-  [\titlerule]                 % Inserts a horizontal line after the heading  
+%\titleformat{\section}%shape
+%  {\large \scshape}%Format applied to the title
+%  {\large\scshape \thesection}%Label text and format
+%  {2ex}%Separation between Label and Title
+%  {}%Before code 
+%  []%After code
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+%4.2 subsection
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+%4.3 subsubsection  
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+%4.4 Paragraph  
+\titleformat{\paragraph}[runin]
+  {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+%4.5 subparagraph  
+\titleformat{\subparagraph}[runin]
+  {\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+ 
 %4.2 subsection  
 \titleformat{\subsection}
-  {\large\scshape\raggedright}
-  {}{0em}
-  {}
+  {\normalfont\Large\bfseries}{\thesubsection}{1em}{}
 
 
+%4.x Spacing
+\titlespacing*{\chapter}	 {0pt}{50pt}{40pt}
+\titlespacing*{\section}	{0pt}{3.25ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+\titlespacing*{\subparagraph}{\parindent}{3.25ex plus 1ex minus .2ex}{1em}
