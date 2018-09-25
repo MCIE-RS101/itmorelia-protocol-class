@@ -1,0 +1,89 @@
+% Portada Ingeniería:
+\pdfbookmark[1]{Portada}{Portada} % Bookmark name visible in a PDF viewer 
+\begin{titlepage}
+\begin{addmargin}[-1cm]{-3cm}
+\hfill
+
+\begingroup
+%Logotipos:
+\begin{picture}(0,0)
+\put(-10,-20){\includegraphics[width=7cm]{logos/sepLogo.jpg}}
+\put(200,-20){\includegraphics[width=5cm]{logos/tecnmBW}}
+\put(380,-20){\includegraphics[width=3cm]{logos/itm}}
+\end{picture}
+
+\begin{center}
+%{\scshape\LARGE SECRETAR\'IA DE EDUCACI\'ON P\'UBLICA\\
+
+\vspace{0.1in}
+\end{center}
+\endgroup
+%--------------
+\begin{center}
+\bigskip
+\rule[3mm]{160mm}{4pt}
+\rule[3mm]{140mm}{3pt}\\
+\bigskip
+\begingroup
+{\Huge
+\textsc{\myUni}\\\vspace{0.1in}
+{\Huge
+\calligra{``José María Morelos y Pavón''}}}
+\endgroup
+\end{center}
+%-------Datos de portada-------
+\begingroup % Create the command for including the title page in the document
+\hbox{ % Horizontal box
+\hspace*{.01\textwidth} % Whitespace to the left of the title page
+%\rule[depth]{width}{height}
+\rule[-1cm]{6pt}{15cm} % Vertical line
+\hspace{3mm}%Horizontal space 
+\rule[0cm]{3pt}{14cm}%
+\hspace{3mm}
+\rule[2cm]{2pt}{12cm} 
+\hspace{1cm}
+\parbox[b]{.75\textwidth}{ % Texto de la portada aquí:
+\begin{center}
+%-----------
+	{\Large
+	\scshape{\myDepartment}\\
+	\textsc{\myFaculty} \\ \bigskip}
+
+	\textsc{TESIS}\\\bigskip
+	\begingroup
+		% Título de la tesis:
+		{\Large
+		\textsc{\color{Maroon}\textsc{``\myTitle''}}\\  
+		\bigskip
+		\bigskip
+		%Subtítulo de la tesis:
+		{\color{Maroon}\texttt{\mySubtitle}}}
+	\endgroup
+	
+	\bigskip 
+	\bigskip 
+	\bigskip
+	
+	\textsc{QUE PARA OBTENER EL TÍTULO DE:}\\
+	\bigskip
+	{\large\textsc{\myDegree}\\\bigskip}
+	\textsc{PRESENTA:}\\
+	{\large\textsc{\myName}}\\ % Your name
+	%\textsc{\mytwoName} \\
+	\bigskip
+	\bigskip
+	{\large
+	\textsc{Director: \myProf}\\
+	\textsc{Codirector: \myOtherProf}\\
+	\textsc{Revisor: \mySupervisor}\\
+	\textsc{Revisor: \myOtherSupervisor}\\}
+\end{center}}}
+\endgroup
+\bigskip
+\bigskip
+\bigskip
+\begin{center}
+\textsc{\myLocation \, -- \myTime \, -- \myThesisVersion}
+\end{center}
+\end{addmargin}
+\end{titlepage}

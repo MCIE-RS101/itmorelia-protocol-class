@@ -1,10 +1,13 @@
-\documentclass{itmthesis}
-\usepackage[spanish]{babel}
+% Engineering, master and phd degree thesis format, august 2018, for the "Instituto Tecnológico de Morelia" 
+\documentclass[listings,drafting,spanish]{itmthesis} %itm thesis class definition
+%\usepackage[spanish]{babel}
+\input{configuration}% config & packages that you requiere:
 \begin{document}
-\chapter{Title of the Chapter}
-	\blindtext
-	\section{Test section}
-		\blindtext
-	\section{Check it}
-Texto en español	
+\pagenumbering{roman} % Roman page numbering 
+\input{precontent} %Includes titlepage, dedication, Foreword, abstract, publication, acknowledgement
+\include{FrontBackMatter/Contents} % Contents, list of figures/tables/listings and acronyms
+\pagenumbering{arabic} % Arabic page numbering
+\include{Chapters/Chapter01} % Chapter 1
+
 \end{document}
+
