@@ -1,0 +1,40 @@
+% Chapter 2
+
+\chapter{Marco teoríco} % Chapter title
+\label{ch:MarcoTeorico} 
+
+\section{Figuras y gráficas}
+Agregar la cantidad de capítulos que se requieran. En la \autoref{fig:A} se muestra la letra A.
+
+
+\blindtext[1] %Texto Dummy
+
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=2.5in]{example-image-a}
+	\caption{Ejemplo de como insertar figuras sencillas.}
+	\label{fig:A}
+\end{figure}
+
+\blindtext[1] %Texto Dummy
+
+
+
+
+\begin{figure}[!h]%
+\centering
+\subfigure[Figure A]{%
+\label{fig:fig-a}%
+\includegraphics[height=2in]{example-image-a}}%
+\\%New line for figure
+\subfigure[Figure B]{%
+\label{fig:fig-b}%
+\includegraphics[height=1.5in]{example-image-b}}%
+~ %Space between figure
+\subfigure[Figure C]{%
+\label{fig:fig-c}%
+\includegraphics[height=1.5in]{example-image-c}}%
+\caption{Using \texttt{subfigures} package.}
+\label{fig:subFigures}
+\end{figure}
