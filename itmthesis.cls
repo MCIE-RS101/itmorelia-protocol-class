@@ -10,28 +10,33 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[colorlinks=true]{hyperref}
 \RequirePackage{blindtext}
+\RequirePackage{scrextend}
+\RequirePackage{booktabs}
+\RequirePackage{calligra}
 %2.2.1 Booleans  
 \RequirePackage{ifthen}
   \newboolean{@drafting} % print version information on pages
   \newboolean{@spanish}  % activates the spanish version at babel otherwise english
   \newboolean{@listings} % loads the listings package
 %2.2.2 Colors
+\PassOptionsToPackage{dvipsnames}{xcolor}
 \RequirePackage{xcolor}
   \definecolor{c1}{rgb}{0,0,1} % blue
+  \definecolor{grisTec}{RGB}{125,125,125}
   \hypersetup{
     linkcolor={c1}, % internal links
     citecolor={c1}, % citations
     urlcolor={c1} % external links/urls
   }
 %2.2.2 This package is essentially a replacement—partial or total—for the LATEX macros related with sections—namely titles, headers and contents.
-\RequirePackage{titlesec}
-%
+\RequirePackage{titlesec}%
 \RequirePackage{xargs} % needed for extended newcommand and others
 \RequirePackage{array} % needed for extended options for array
 \RequirePackage{amsmath}
+\RequirePackage{graphicx}
 %2.3  Page settings:
 \RequirePackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
-%2.4    Macros and Commands:
+%2.4   Macros and Commands:
 %Commands
 \newcommand{\myVersion}{version 1.0\xspace}
 %2.4.1    Derivatives
@@ -92,7 +97,7 @@
 	\ifthenelse{\boolean{@spanish}}%test
 	    {	%then clause
 	    	\@ifpackageloaded{babel}
-	    	{\relax}{\RequirePackage[spanish]{babel}}%
+	    	{\relax}{\RequirePackage[es-tabla,spanish]{babel}}%
 	    }
 	    {\relax}% else clause
 %3.2.3 Listing related stuff

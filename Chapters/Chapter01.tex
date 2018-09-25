@@ -1,3 +1,222 @@
 % Chapter 1
-\chapter{Protocolo de Investigación}\label{ch:protocolo} 
-\section{Introducción}
+
+\chapter{Introducción} % Chapter title
+\label{ch:introduccion} 
+
+\section{Semblanza del problema}
+
+La metalurgia es un área primordial para el desarrollo de diversos sectores como el aeroespacial, automotriz, de construcción, entre otros. Por ejemplo, la industria aeroespacial ha aumentado sus ventas hacia varios billones de dólares debido al crecimiento que ha tenido durante los últimos años.
+
+Los tratamientos térmicos son esenciales para crear componentes aeroespaciales de alta calidad, por lo que
+la industria ha puesto en marcha programas para mejorar el rendimiento de las aleaciones e identificar los procesos apropiados para aplicaciones aeroespaciales \cite{BREWER1998}.
+
+Existe una tendencia creciente en utilizar acero convencional en vehículos y en construcciones, ya que es un metal ligero y cumple con requerimientos estrictos con respecto al ahorro de combustible y de emisiones  \cite{cole1995light}.
+ 
+%El consumidor más grande de productos de acero es el sector de construcción \cite{KYLILI2017280}. 
+
+%Es utilizado en la industria aeroespacial, automotriz, construcción.
+%Debido al incremento en la calidad y a la facilidad d mantenimiento el acero es un material atractivo para la construcción.
+
+
+
+Los tratamientos térmicos son procesos que modifican las propiedades físicas, químicas y mecánicas de los materiales. 
+Éstos están formados por un conjunto de operaciones que tienen como objetivo alcanzar distintas temperaturas en procesos de calentamiento y enfriamiento a diferentes velocidades \cite{moleraTratamientosMarcomo}.
+%(Tratamientos térmicos de los metales, Pere Molera Solá, marcombo, 1991)
+ 
+Los tratamientos térmicos se efectúan para aumentar la resistencia y dureza, mejorar la ductilidad, mejorar la facilidad de trabajo, liberar esfuerzos, endurecer  y modificar las propiedades eléctricas y magnéticas de los materiales.
+Se tratan térmicamente no sólo las piezas semiacabadas, %(bloques, lingotes, planchas, etc.),
+%con objeto de disminuir su dureza, mejorar la maquinibilidad y preparar su estructura para el tratamiento térmico definitivo posterior, 
+sino también las piezas terminadas y las herramientas con el fin de proporcionarles las propiedades definitivas y exigidas \cite{TratamientosAcerosTesis}.
+Todos los procesos  antes mencionados tienen como finalidad realizar cambios en la estructura de los materiales, lo que es conocido como transformaciones.
+%Tratamientos térmicos de los aceros, tesis, 1996, universidad autònoma de Nuevo León
+
+
+%Los procesos metalúrgicos actuales utilizan tecnología de la información avanzada para procesos de control y monitoreo de las operaciones. 
+%http://www.jernkontoret.se/en/the-steel-industry/production-utilisation-recycling/processes/
+
+%El proceso de modificación del material
+%Para maximizar la vida útil del acero se modifica su comportamiento. es
+%de manera beneficiosa 
+ %(Effect of heat treatment on mechanical properties of medium carbon steel.) 
+
+
+Cuando se tienen contenidos menores del $2\%$ de carbono en el hierro se obtiene acero, el cual
+presenta una serie de transformaciones en función de la temperatura \cite{TratamientosAcerosTesis}.
+%que son cambios en la estructura del material
+El acero es, por mucho, la aleación más ampliamente utilizada debido a su flexibilidad en los trabajos con metales y en los tratamientos térmicos para producir una gran variedad de propiedades \cite{PracticalHeatTreating}. 
+%mecánicas, físicas y químicas.\ 
+
+
+
+El contenido de carbono influye en la temperatura a la que ocurren las transformaciones. 
+El porcentaje de carbono también afecta la estructura reticular resultante al finalizar el tratamiento térmico. 
+Por lo que varían también las propiedades mecánicas, térmicas, eléctricas, etc. del material \cite{TratamientosAcerosTesis}.
+%aunque la estructura resultante también depende del tratamiento térmico aplicado.
+
+
+
+%-Si se conocen estas propiedades de una pieza se puede determinar el material del que está hecha.
+Es importante conocer el material para especificar el procedimiento del tratamiento térmico que producirá el efecto deseado.
+Por lo tanto, se deben identificar los parámetros del sistema
+para establecer las velocidades de calentamiento y enfriamiento. 
+%El material o la estructura? o determina lo mismo? cada material (con su estructura) tiene diferentes propiedades
+
+
+Existen diversos procedimientos, métodos y sistemas para determinar estos parámetros. Sin embargo, con el objetivo de desarrollar tecnológicamente los estudios y optimización de los tratamientos térmicos, el posgrado en Electrónica y Metalurgia desarrollaron en conjunto un sistema para análisis y estudios térmicos.
+ 
+
+El sistema que se muestra en la fig controla la temperatura de una probeta, con el cual se pueden estudiar los tratamientos térmicos a pequeña escala. 
+
+Los parámetros del sistema cambian en base al material, en este caso al contenido de carbono, para su funcionamiento óptimo es necesario que se determinen los parámetros.
+
+
+
+
+
+
+Es necesario tener un modelo para predecir el comportamiento térmico de la probeta. Un modelo térmico-eléctrico es simple y efectivo para analizar procesos de transferencia de calor.
+
+%Se pretende que al colocar una probeta en el sistema y calentarla se determinen sus parámetros y se implemente un algoritmo clasificador del material.
+% por medio de  
+
+
+
+
+%----se pueden conocer y determinar el material y fase? solo material?
+
+
+
+
+
+
+
+%---------------------------------------------------------------------------------------------------------------------------------
+
+\section{Revisión del estado del arte}
+
+
+Para la identificación de parámetros,  en este caso específicamente parámetros térmicos, se han utilizado varios métodos.
+% como en 
+%Las propiedades del material, la geometría, los coeficientes de transferencia de calor son necesarios .  
+
+ Por ejemplo, en \cite{FEMGlotic2000} se realiza la identificación de los parámetros térmicos por medio de una técnica basada en un algoritmo de optimización estocástico llamado evolución diferencial (Differential Evolution, DE), con la cual se determinan los coeficientes de transferencia de calor exactos para realizar un modelo térmico que simule el comportamiento térmico de un transformador.   
+%Para obtener resultados precisos de la distribución de temperatura,
+ El objetivo del algoritmo es  alcanzar la mejor concordancia posible entre los valores de temperatura medidos y los del modelo. 
+
+%Por medio de un modelo de un circuito térmico, que es muy parecido a un circuito eléctrico, simplifica los cáculos de tranferencia de calor a cálculos de un circuito. Estudios han demostrado que los resultados calculñados con este modelo concuerdan con los datos experimentales.
+En \cite{RadialFeng2015} se establece
+un modelo térmico radial en ecuaciones de estado para calcular la variación de temperatura radial en un conductor, los parámetros son identificados utilizando el método de regresión lineal. Se implementa una plataforma para medir la temperatura radial del conductor y para verificar el modelo propuesto.
+
+En \cite{KalmanBucyPaz} es posible estimar el estado y los parámetros desconocidos del sistema dado un sistema de ecuaciones diferenciales que describen el comportamiento dinámico de un motor de corriente directa. 
+Se estima el estado y los parámetros de un sistema lineal 
+%los cuales son adaptados en línea,
+usando la estimación de estados estocásticos. 
+%El problema de la identificación de parámetros se combina con la estimación de estados estocásticos para un sistema lineal. 
+%mediante un proceso de identificación en línea, y utilizando la estimación de estados estocásticos.
+%por medio de de un proceso de identificación en línea combinado con la estimación de estado estocástico.
+
+
+
+
+En los artículos revisados se obtienen los parámetros que describen el comportamiento térmico de la pieza que se analiza. Sin embargo, no se reporta o se hacen pruebas con otras piezas de geometría similar pero con materiales diferentes, para determinar la influencia de la composición química en los parámetros.
+%los efectos y la capacidad de estos métodos en determinar los parámetros.
+%para analizar cómo es que varían con respecto al material del que están hechos. 
+
+
+
+
+
+
+
+
+
+\section{Solución propuesta} \label{SolProp}
+
+\noindent Relacionar los parámetros por medio de un modelo
+térmico-eléctrico, a través de sus curvas de calentamiento. Inyectando corriente de distintas magnitudes a probetas diseñadas, hechas de acero al carbono pero con porcentajes de carbono diferente.
+%obteniendo su, utilizando probetas con la misma geometría y , con porcentajes de carbón bajo, medio y alto.
+
+%****************************************************************
+
+\section{Objetivos}
+
+\subsection{Objetivo general}
+
+Determinar los parámetros 
+de probetas metálicas en procesos de calentamiento óhmico a través de un modelo térmico-eléctrico, utilizando ajuste de curvas no lineales.
+
+%Obtener los parámetros térmicos de las probetas y realizar una base de datos. 
+
+\subsection{Objetivos particulares}
+\begin{itemize} 
+	\item Obtener un modelo análogo térmico-eléctrico que describa el calentamiento de las probetas al inyectar un escalón de corriente.
+	\item Determinar los parámetros térmicos de las probetas de forma analítica utilizando el modelo e ingresando la geometría de la probeta, propiedades del material y corriente eléctrica de la fuente.
+	\item Realizar pruebas con las probetas de acero al carbono con porcentajes de carbón bajo, medio y alto. Existen tres probetas para cada concentración de carbono.
+	%Se define la corriente constante que se inyecará a cada probeta en cada prubea 
+	\item Determinar los parámetros térmicos de las probetas por medio de un ajuste de curvas no lineales, el cual busca reducir la diferencia entre la temperatura medida en las pruebas y la calculada con el modelo. 
+	%los datos experimentales y 
+	\item Hacer una clasificación del material de las probetas en función de los parámetros identificados.
+	
+	
+	
+	%Analizar el desempeño del convertidor considerando las componentes parásitas de la capacitancia e inductancia. %Maestría
+	%\item Diseñar y construir un convertidor DC-DC que permita, en lo futuro, almacenar la energía para ser utilizada posteriormente. %Maestría
+\end{itemize}
+%****************************************************************
+
+\section{Hipótesis}
+La hipótesis del trabajo
+se basa en la composición química particular en
+cada material, consecuentemente al obtener varias respuestas
+térmicas y modelos de impedancia térmica es posible crear una base
+de datos para clasificar y determinar composiciones
+químicas/mecánicas basadas en los datos térmicos
+obtenidos durante los experimentos de tratamiento
+térmico.
+%debido a que los parámetros cambian en base a la geometría y al material. Se pretende identificar los parámetros de diferentes materiales, con la misma geometría y así clasificarlos de manera amplia.
+
+
+\section{Metodología}
+
+En la \autoref{tb:pruebas} se muestran las pruebas realizadas a las nueve probetas de acero al carbono, de las cuales tres probetas son de acero medio carbono, tres de ABC\footnote{Acero de Bajo Carbono} y las tres restantes de AAC\footnote{Acero de Alto Carbono}.  
+
+
+
+
+
+\begin{table}[!h]
+	\renewcommand{\arraystretch}{1.4} %size rows
+	\caption{\textsc{Pruebas realizadas.}} %capitalized letters
+	\label{tb:pruebas}
+	\centering
+	\resizebox{15cm}{!} {
+		\begin{tabular}{lcccccccccccc}
+			%\hline
+			%\cline {2-13}
+			\bfseries  & \bfseries $155 A$ & \bfseries $160 A$ & \bfseries $165 A$ & \bfseries $170 A$ & \bfseries $175 A$ & \bfseries $177 A$ & \bfseries $180 A$ & \bfseries $185 A$ & \bfseries $190 A$ & \bfseries $193 A$ & \bfseries $195 A$ & \bfseries $198 A$\\
+			\toprule
+			
+			Probeta 1 ABC & X	&X	&X &X &X	& & & & & & &\\
+			
+			Probeta 2 acero de bajo carbono  & 	&	&X &X &X &	&X  &X &X & & &\\
+			
+			Probeta 3 acero de bajo carbono & X	&X	&X &X &X &X &X	&  & & & &\\
+			
+			Probeta 1 acero de medio carbono & 	& &	& & &  & X &X &X	& & & \\
+			
+			Probeta 2 acero de medio carbono& &	&	& & &	&  X &X &X & & &\\
+			
+			Probeta 3 acero de medio carbono	& 	&	& & &X & &X	&X &X & X & &\\
+			
+			Probeta 1 acero de alto carbono	& 	&	& &X	&X & &X &X &X & &X &\\
+			
+			Probeta 2 acero de alto carbono	& 	&	& & &X	& &X	&X &X & &X &X \\
+			
+			Probeta 3 acero de alto carbono	& 	&	& & &	X &	&X	&X &X  & & &\\
+			
+			\bottomrule
+			
+		\end{tabular}
+	}
+\end{table}
+
