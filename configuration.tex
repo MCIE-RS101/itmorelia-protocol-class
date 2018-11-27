@@ -2,7 +2,7 @@
 
 % 1 Code listing setup
 %------------------
-\RequirePackage{listings} 
+\RequirePackage{listings}
 \newcaptionname{spanish}{\lstlistlistingname}{Sección de Códigos}
 \renewcommand{\lstlistingname}{Código}
 \renewcommand{\lstlistlistingname}{Códigos}
@@ -71,11 +71,14 @@
 
 %-------------------------
 % 4. Required packages for
-% figures, plots, subfigures 
+% figures, plots, subfigures
 %-------------------------
 \usepackage{float}
 \usepackage{subfigure}
 \usepackage{tikz}
+\usepackage{booktabs} %Beautiful tables
+\usepackage{todonotes} %Todo list for comments
+\usepackage[version-1-compatibility]{siunitx} %easy writting of SI units
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.10}
 %-------------------------
