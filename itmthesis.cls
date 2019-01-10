@@ -97,7 +97,7 @@
 	\ifthenelse{\boolean{@spanish}}%test
 	    {	%then clause
 	    	\@ifpackageloaded{babel}
-	    	{\relax}{\RequirePackage[es-tabla,spanish]{babel}}%
+	    	{\relax}{\RequirePackage[es-tabla,spanish,es-nodecimaldot]{babel}}%
 	    }
 	    {\relax}% else clause
 %3.2.3 Listing related stuff
