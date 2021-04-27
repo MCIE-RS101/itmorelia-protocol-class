@@ -5,3 +5,7 @@
 */*.bbl
 */*.ist
 */*.synctex.gz
+*.synctex.gz
+*.ist
+*.bbl
+*.acn

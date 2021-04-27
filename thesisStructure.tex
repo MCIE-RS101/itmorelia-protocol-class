@@ -1,6 +1,9 @@
-% Engineering, master and phd degree thesis format, august 2018, for the "Instituto Tecnológico de Morelia" 
-\documentclass[listings,drafting,spanish]{itmthesis} %itm thesis class definition
-\input{configuration}% configuration & packages required
+% Engineering, master and phd degree 
+%PROPOSAL(PROTOCOL) format, April 2021, for the 
+%**Instituto Tecnológico de Morelia**
+\documentclass[listings,drafting,spanish]{itmthesis} %itm thesis class
+\input{configuration}% configuration and packages
+\input{FrontBackMatter/glossary-entries}
 \begin{document}
 \pagenumbering{roman} % Roman page numbering 
 \input{precontent} %Includes titlepage, dedication, Foreword, abstract, publication, acknowledgement
@@ -8,9 +11,9 @@
 \pagenumbering{arabic} % Arabic page numbering
 %-=-=-=-=-=-=-=-=-=-=-=-=-
 % Thesis Main Contents
-\include{Chapters/Chapter01} % Chapter 1
+\include{Chapters/Chapter01} %Introduction
 \cleardoublepage
-\include{Chapters/Chapter02} % Chapter 2
+\include{Chapters/Chapter02} %Results
 %-=-=-=-=-=-=-=-=-=-=-=-=-
 % Apendix
 
@@ -26,7 +29,5 @@
 % Back Matter
 \cleardoublepage
 \include{FrontBackMatter/Colophon}
-\cleardoublepage
-\include{FrontBackMatter/Declaration}
 %-=-=-=-=-=-=-=-=-=-=-=-=-
 \end{document}

@@ -1,4 +1,5 @@
-% Portada Ingeniería:
+%!TeX root=../thesisStructure.tex
+% Portada Maestría/Doctorado:
 \pdfbookmark[1]{Portada}{Portada} % Bookmark name visible in a PDF viewer 
 \begin{titlepage}
 \begin{addmargin}[-1cm]{-3cm}
@@ -7,9 +8,9 @@
 \begingroup
 %Logotipos:
 \begin{picture}(0,0)
-\put(-10,-20){\includegraphics[width=7cm]{logos/sepLogo.jpg}}
-\put(200,-20){\includegraphics[width=5cm]{logos/tecnmBW}}
-\put(380,-20){\includegraphics[width=3cm]{logos/itm}}
+\put(-10,-20){\includegraphics[width=7cm]{sepLogo.jpg}}
+\put(200,-20){\includegraphics[width=5cm]{tecnmBW}}
+\put(380,-20){\includegraphics[width=3cm]{itm}}
 \end{picture}
 
 \begin{center}
@@ -57,33 +58,29 @@
 		\bigskip
 		\bigskip
 		%Subtítulo de la tesis:
-		{\color{Maroon}\texttt{\mySubtitle}}}
+		%{\color{Maroon}\texttt{\mySubtitle}}
+		}
 	\endgroup
-	
-	\bigskip 
-	\bigskip 
 	\bigskip
-	
 	\textsc{QUE PARA OBTENER EL TÍTULO DE:}\\
 	\bigskip
 	{\large\textsc{\myDegree}\\\bigskip}
 	\textsc{PRESENTA:}\\
 	{\large\textsc{\myName}}\\ % Your name
 	%\textsc{\mytwoName} \\
-	\bigskip
-	\bigskip
+
 	{\large
 	\textsc{Director: \myProf}\\
 	\textsc{Codirector: \myOtherProf}\\
 	\textsc{Revisor: \mySupervisor}\\
 	\textsc{Revisor: \myOtherSupervisor}\\}
+	\bigskip
+	\bigskip
+	\bigskip
+	\bigskip
+	\bigskip
+	\textsc{\myLocation \, -- \myTime \, -- \myThesisVersion}
 \end{center}}}
 \endgroup
-\bigskip
-\bigskip
-\bigskip
-\begin{center}
-\textsc{\myLocation \, -- \myTime \, -- \myThesisVersion}
-\end{center}
 \end{addmargin}
 \end{titlepage}
