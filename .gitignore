@@ -1,0 +1,7 @@
+*/*.aux
+*/*.log
+*/.acn
+*/*.acn
+*/*.bbl
+*/*.ist
+*/*.synctex.gz
