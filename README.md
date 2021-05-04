@@ -43,6 +43,43 @@ In the `root` are files related with the organization and the structure of the *
 
 
 # The `thesisStructure` file
+The main file in the project is the `thesisStructure.tex` file. 
+
+```Tex
+% Engineering, master and phd degree 
+%PROPOSAL(PROTOCOL) format, April 2021, for the 
+%**Instituto Tecnológico de Morelia**
+\documentclass[listings,drafting,spanish]{itmthesis} %itm thesis class
+\input{configuration}% configuration and packages
+\input{FrontBackMatter/glossary-entries}
+\begin{document}
+\pagenumbering{roman} % Roman page numbering 
+\input{precontent} %Includes titlepage, dedication, Foreword, abstract, publication, acknowledgement
+\include{FrontBackMatter/Contents} % Contents, list of figures/tables/listings and acronyms
+\pagenumbering{arabic} % Arabic page numbering
+%-=-=-=-=-=-=-=-=-=-=-=-=-
+% Thesis Main Contents
+\include{Chapters/Chapter01} %Introduction
+\cleardoublepage
+\include{Chapters/Chapter02} %Results
+%-=-=-=-=-=-=-=-=-=-=-=-=-
+% Apendix
+
+\appendix
+
+\include{Chapters/Chapter0A} % Appendix A
+
+%-=-=-=-=-=-=-=-=-=-=-=-=-
+% References
+\cleardoublepage
+\include{FrontBackMatter/Bibliography}
+%-=-=-=-=-=-=-=-=-=-=-=-=-
+% Back Matter
+\cleardoublepage
+\include{FrontBackMatter/Colophon}
+%-=-=-=-=-=-=-=-=-=-=-=-=-
+\end{document}
+```
 
 ## Chapters
 
