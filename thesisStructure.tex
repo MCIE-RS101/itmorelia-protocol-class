@@ -1,32 +1,33 @@
 % Engineering, master and phd degree 
 %PROPOSAL(PROTOCOL) format, April 2021, for the 
 %**Instituto Tecnológico de Morelia**
+%-=-=-=-=-=-=-=-=-=-=-=-=-
+% 1)Configuration:
 \documentclass[listings,drafting,spanish]{itmthesis} %itm thesis class
 \input{configuration}% configuration and packages
 \input{FrontBackMatter/glossary-entries}
 \begin{document}
+% -=-=-=-=-=-=-=-=-=-=-=-=-
+% 2)Front Matter:
 \pagenumbering{roman} % Roman page numbering 
 \input{precontent} %Includes titlepage, dedication, Foreword, abstract, publication, acknowledgement
 \include{FrontBackMatter/Contents} % Contents, list of figures/tables/listings and acronyms
 \pagenumbering{arabic} % Arabic page numbering
 %-=-=-=-=-=-=-=-=-=-=-=-=-
-% Thesis Main Contents
+% 3) Thesis Main Contents
 \include{Chapters/Chapter01} %Introduction
 \cleardoublepage
 \include{Chapters/Chapter02} %Results
 %-=-=-=-=-=-=-=-=-=-=-=-=-
 % Apendix
-
 \appendix
-
 \include{Chapters/Chapter0A} % Appendix A
-
 %-=-=-=-=-=-=-=-=-=-=-=-=-
-% References
+% 4) References
 \cleardoublepage
 \include{FrontBackMatter/Bibliography}
 %-=-=-=-=-=-=-=-=-=-=-=-=-
-% Back Matter
+% 5) Back Matter
 \cleardoublepage
 \include{FrontBackMatter/Colophon}
 %-=-=-=-=-=-=-=-=-=-=-=-=-
